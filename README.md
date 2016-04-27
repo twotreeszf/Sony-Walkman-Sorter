@@ -36,3 +36,8 @@ python SortFiles.py ~/Documents/musics
 
 ```
 - 然后拷回Walkman，搞定！
+
+![](/1.jpg)
+![](/2.jpg)
+![](/3.jpg)
+
