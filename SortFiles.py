@@ -11,7 +11,7 @@ from mutagen.easymp4 import EasyMP4 as MP4
 def chineseCharacterLetter(str):
     if str > u'\u9fa5' or str < u'\u4e00':
         return None
-    str = str.encode('gbk')
+    str = str.encode('gbk', 'ignore')
     asc = ord(str[0]) * 256 + ord(str[1]) - 65536
     if asc >= -20319 and asc <= -20284: 
         return 'a' 
@@ -80,20 +80,28 @@ def checkTagMakeSort(path, meta, tagName):
 def setSortTags(path):
     ext = os.path.splitext(path)[1]
     meta = None
-    if ext == '.mp3':
-        meta = MP3(path)
-    elif ext == '.m4a':
-        meta = MP4(path)
-    else:
-        print('[info] {0} not audio file'.format(path))
-        return
 
-    checkTagMakeSort(path, meta, 'ALBUM')
-    checkTagMakeSort(path, meta, 'ALBUMARTIST')
-    checkTagMakeSort(path, meta, 'ARTIST')
-    checkTagMakeSort(path, meta, 'TITLE')
+    try:
+        if ext == '.mp3':
+            meta = MP3(path)
+        elif ext == '.m4a':
+            meta = MP4(path)
+        else:
+            print('[info] {0} not audio file'.format(path))
+            return
+    except:
+        pass
 
-    meta.save()
+    if meta:
+        try:
+            checkTagMakeSort(path, meta, 'ALBUM')
+            checkTagMakeSort(path, meta, 'ALBUMARTIST')
+            checkTagMakeSort(path, meta, 'ARTIST')
+            checkTagMakeSort(path, meta, 'TITLE')
+
+            meta.save()
+        except:
+            pass
 
 def processFilesInFolder(folder):
     dirlist = os.listdir(folder)

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ac7de6b-b671-4828-a518-462812f9fb41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/twotrees.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SortFiles.py" afterPath="$PROJECT_DIR$/SortFiles.py" />
     </list>
     <ignored path="Sony-Walkman-Sorter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +26,8 @@
       <file leaf-file-name="SortFiles.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SortFiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+            <state relative-caret-position="546">
+              <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -402,7 +402,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/SortFiles.py</url>
-          <line>107</line>
+          <line>115</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -487,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SortFiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+        <state relative-caret-position="546">
+          <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
           <folding />
         </state>
       </provider>
