@@ -3,6 +3,10 @@ import sys
 import os
 from os import path
 
+from mutagen.easyid3 import EasyID3
+EasyID3.RegisterTextKey('ALBUMARTIST', 'TPE2')
+EasyID3.RegisterTextKey('ALBUMARTISTSORT', 'TSO2')
+
 from mutagen.mp3 import EasyMP3 as MP3
 from mutagen.easymp4 import EasyMP4 as MP4
 from pypinyin import lazy_pinyin
@@ -44,12 +48,13 @@ def checkTagMakeSort(path, meta, tagName):
             return True
 
 def setSortTags(path):
-    ext = os.path.splitext(path)[1]
+    ext = os.path.splitext(path)[1].lower()
     meta = None
 
     try:
         if ext == '.mp3':
             meta = MP3(path)
+            meta.tags
         elif ext == '.m4a':
             meta = MP4(path)
         else:
