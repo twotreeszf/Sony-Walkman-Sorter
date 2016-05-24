@@ -29,26 +29,19 @@ def CJKFirstLetters(str):
     return firstLetters
 
 def checkTagMakeSort(path, meta, tagName):
-    sortKey = tagName + 'SORT'
-
-    tagSort = meta.get(sortKey)
-    if tagSort and len(tagSort) and tagSort[0] != '':
-        tagSort = tagSort[0]
-        if not beginWithCJK(tagSort):
-            return False
-
-    tag = meta.get(tagName)
-    if (not tag) or (not len(tag)) or (tag[0] == ''):
-        return False
-    else:
-        tag = tag[0]
-        if not beginWithCJK(tag):
+    value = meta.get(tagName)
+    if value and len(value) and value[0] != '':
+        value = value[0]
+        if not beginWithCJK(value):
             return False
         else:
-            firstLetters = CJKFirstLetters(tag)
-            meta[sortKey] = firstLetters
-            print('[info] {0}: processed [{1}] is \"{2}\"'.format(path, sortKey, firstLetters))
+            firstLetters = CJKFirstLetters(value).upper()
+            newValue = firstLetters[0:3] + '^' + value
+            meta[tagName] = newValue
+            print('[info] {0}: processed [{1}] is \"{2}\"'.format(path, tagName, newValue))
             return True
+
+    return False
 
 def setSortTags(path):
     ext = os.path.splitext(path)[1].lower()
