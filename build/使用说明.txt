@@ -1,0 +1,11 @@
+﻿使用说明：
+
+1.对应的操作系统下有SortFilesiBasso和SortFilesSony两个排序工具，
+SortFilesiBasso用于DX50/80/90/100等不支持sort tags的机型，排序后歌名、歌手、专辑名称前面会出现字母前缀
+SortFilesSony用于ZX1/2/100 A15/25等支持支持sort tags的机型，排序后不会出现字母前缀
+
+2.将对应的工具拷贝到音乐文件所在目录，直接双击或者在命令行之行即可。Windows用户需要先安装vcredist_x86.exe
+
+作者:twotrees
+Email:twotrees.zf@gmail.com
+QQ:329292657

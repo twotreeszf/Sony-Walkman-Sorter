@@ -12,6 +12,8 @@ EasyID3.RegisterTextKey('ALBUMARTISTSORT', 'TSO2')
 
 from mutagen.mp3 import EasyMP3 as MP3
 from mutagen.easymp4 import EasyMP4 as MP4
+from mutagen.flac import FLAC
+
 from pypinyin import lazy_pinyin
 
 def beginWithCJK(str):
@@ -50,9 +52,10 @@ def setSortTags(path):
     try:
         if ext == '.mp3':
             meta = MP3(path)
-            meta.tags
         elif ext == '.m4a':
             meta = MP4(path)
+        elif ext == '.flac':
+            meta = FLAC(path)
         else:
             return
     except:
