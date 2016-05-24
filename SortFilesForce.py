@@ -98,7 +98,7 @@ if __name__ == '__main__':
     folder = None
     if len(sys.argv) < 2 :
         print('[info] no folder path specified, process current folder')
-        folder = path.dirname(sys.argv[0])
+        folder = os.getcwd()
     else:
         folder = sys.argv[1]
         if not path.isdir(folder):
