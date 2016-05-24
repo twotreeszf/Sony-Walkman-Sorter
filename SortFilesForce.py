@@ -81,11 +81,30 @@ def processFilesInFolder(folder):
             processFilesInFolder(abspath)
 
 if __name__ == '__main__':
+    message = '''
+    Walkman file sorter by twotrees, Email:twotrees.zf@gmail.com, QQ:329292657
+
+    Usage:
+
+    Process in current folder:
+    ./SortFiles
+
+    Process in specified folder:
+    ./SortFiles [folder_path]
+
+    '''
+    print(message)
+
+    folder = None
     if len(sys.argv) < 2 :
-        print('[error] need param: target folder path')
+        print('[info] no folder path specified, process current folder')
+        folder = path.dirname(sys.argv[0])
     else:
         folder = sys.argv[1]
         if not path.isdir(folder):
             print('[error] target folder not exist')
-        else:
-            processFilesInFolder(folder)
+            folder = None
+
+    if (folder):
+        print('[info] process folder [{0}]'.format(folder))
+        processFilesInFolder(folder)
