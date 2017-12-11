@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d288478b-1d16-4c74-96f8-7af3ff673686" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/" />
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512994014655</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added .gitignore, License and Modified Log Level">
+      <created>1512994173204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512994173204</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -251,7 +257,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Japanese Support" />
     <MESSAGE value="Added License and Modified Log Level" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added License and Modified Log Level" />
+    <MESSAGE value="Added .gitignore, License and Modified Log Level" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .gitignore, License and Modified Log Level" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
