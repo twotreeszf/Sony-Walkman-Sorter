@@ -6,18 +6,16 @@ import os
 from os import path
 import logging
 import JKConverter
-
-logging.basicConfig(level=logging.DEBUG)
-
 from mutagen.easyid3 import EasyID3
-EasyID3.RegisterTextKey('ALBUMARTIST', 'TPE2')
-EasyID3.RegisterTextKey('ALBUMARTISTSORT', 'TSO2')
-
 from mutagen.mp3 import EasyMP3 as MP3
 from mutagen.easymp4 import EasyMP4 as MP4
 from mutagen.flac import FLAC
-
 from pypinyin import lazy_pinyin, Style
+
+EasyID3.RegisterTextKey('ALBUMARTIST', 'TPE2')
+EasyID3.RegisterTextKey('ALBUMARTISTSORT', 'TSO2')
+
+logging.basicConfig(level=logging.INFO)
 
 def beginWithCJK(str):
     if u'\u2e80' <= str[0] <= u'\u9fff':
